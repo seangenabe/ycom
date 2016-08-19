@@ -124,7 +124,7 @@ if (browser) {
       let nodesToDelete = []
       for (let node of walk(record.removedNodes)) {
         if (!(node.dataset && node.dataset[pkgKey])) {
-          return
+          continue
         }
         nodesToDelete.unshift(node)
       }
