@@ -10,7 +10,7 @@
 
 ## Usage
 
-```
+```javascript
 const Component = require('ycom')
 ```
 
