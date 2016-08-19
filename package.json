@@ -1,0 +1,32 @@
+{
+  "name": "ycom",
+  "version": "1.0.0-1",
+  "description": "morphdom components with events.",
+  "scripts": {
+    "test": "browserify test.js | tape-run"
+  },
+  "homepage": "https://github.com/seangenabe/ycom",
+  "author": "Sean Genabe <seangenabe@outlook.com>",
+  "repository": "seangenabe/ycom",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "main": "index.js",
+  "keywords": [
+    "component",
+    "yo-yo"
+  ],
+  "dependencies": {
+    "global": "^4.3.0",
+    "morphdom": "^2.0.4",
+    "randomatic": "^1.1.5"
+  },
+  "devDependencies": {
+    "yo-yo": "^1.2.2",
+    "browser-launcher2": "^0.4.6",
+    "browserify": "^13.1.0",
+    "tape": "^4.6.0",
+    "tape-run": "^2.1.4"
+  }
+}
