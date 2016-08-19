@@ -14,7 +14,7 @@
 const Component = require('ycom')
 ```
 
-The module exports `Component`, a class that can (and should) extended for use by consumers. `Component` extends `EventEmitter`, so passing events around is supported out of the box.
+The module exports `Component`, a class that should be extended for use by consumers. `Component` extends `EventEmitter`, so passing events around is supported out of the box.
 
 ### #constructor(opts)
 
@@ -24,7 +24,7 @@ The module exports `Component`, a class that can (and should) extended for use b
 
 Should be overridden by consumers to return an instance of `HTMLElement`.
 
-Check out the npm packages `bel`, `hyperx`, and `yo-yo` for easy generation of `HTMLElement` instances from Javascript.
+Check out the npm packages [bel](https://www.npmjs.com/package/bel), [hyperx](https://www.npmjs.com/package/hyperx), and [yo-yo](https://www.npmjs.com/package/yo-yo) for easy generation of `HTMLElement` instances from Javascript.
 
 ### #added() / Event: added
 
