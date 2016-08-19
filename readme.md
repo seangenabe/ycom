@@ -36,7 +36,43 @@ When the component node is removed from the document, the `removed` prototype me
 
 ### get #node
 
-Returns the node currently assigned to the document, or generates one if it doesn't exist.
+Returns the node currently assigned to the component, or generates one if it doesn't exist.
+
+### Example
+
+```javascript
+const Component = require('ycom')
+const yo = require('yo-yo')
+
+class MyComponent extends Component {
+
+  constructor({ message = '' } = {}) {
+    super() // You can pass arguments to the EventEmitter constructor here (optional).
+    this.message = message
+  }
+
+  added() {
+    console.log("called when added to the DOM!")
+  }
+
+  removed() {
+    console.log("called when removed from the DOM!")
+  }
+
+  render() {
+    return yo`<em>${this.message}</em>` // compose the component rendering function here
+  }
+}
+
+let component = new MyComponent({ message: "Hello Javascript!" })
+
+component.once('added', () => console.log("also called when added to the DOM"))
+component.once('removed', () =>
+  console.log("also called when removed from the DOM")
+)
+
+document.body.appendChild(component.node)
+```
 
 ## License
 
