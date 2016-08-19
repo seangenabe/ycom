@@ -62,9 +62,14 @@ module.exports = class Component extends EventEmitter {
   }
 
   update() {
-    let { node } = this
-    let newNode = this[wrapRender]()
-    morphdom(node, newNode)
+    let node = this[_node]
+    if (node) {
+      let newNode = this[wrapRender]()
+      morphdom(node, newNode)
+    }
+    else {
+      this.node
+    }
   }
 
   get node() {
