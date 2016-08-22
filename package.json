@@ -1,7 +1,7 @@
 {
   "name": "ycom",
   "version": "1.0.1",
-  "description": "morphdom components with events.",
+  "description": "yo-yo components with events.",
   "scripts": {
     "test": "browserify test.js | tape-run"
   },

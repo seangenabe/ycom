@@ -1,4 +1,4 @@
-const morphdom = require('morphdom')
+const yo = require('yo-yo')
 const { EventEmitter } = require('events')
 const randomatic = require('randomatic')
 const g = require('global')
@@ -65,7 +65,7 @@ module.exports = class Component extends EventEmitter {
     let node = this[_node]
     if (node) {
       let newNode = this[wrapRender]()
-      morphdom(node, newNode)
+      yo.update(node, newNode)
     }
     else {
       this.node
