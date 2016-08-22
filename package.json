@@ -19,11 +19,10 @@
   ],
   "dependencies": {
     "global": "^4.3.0",
-    "morphdom": "^2.0.4",
-    "randomatic": "^1.1.5"
+    "randomatic": "^1.1.5",
+    "yo-yo": "^1.2.2"
   },
   "devDependencies": {
-    "yo-yo": "^1.2.2",
     "browser-launcher2": "^0.4.6",
     "browserify": "^13.1.0",
     "tape": "^4.6.0",
