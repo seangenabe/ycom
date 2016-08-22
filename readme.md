@@ -1,6 +1,6 @@
 # ycom
 
-`yo-yo` components with events.
+`yo-yo` components with classes and events.
 
 [![npm](https://img.shields.io/npm/v/ycom.svg?style=flat-square)](https://www.npmjs.com/package/ycom)
 [![Build Status](https://img.shields.io/travis/seangenabe/ycom/master.svg?style=flat-square)](https://travis-ci.org/seangenabe/ycom)
