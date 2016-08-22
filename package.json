@@ -1,6 +1,6 @@
 {
   "name": "ycom",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "yo-yo components with classes and events.",
   "scripts": {
     "test": "browserify test.js | tape-run"
