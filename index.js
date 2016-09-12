@@ -114,7 +114,7 @@ if (browser) {
       }
 
       // Check if the added node belongs to a component.
-      for (let node of walk(record.addedNodes)) {
+      for (let node of walkList(record.addedNodes)) {
         if (!(node.dataset && node.dataset[pkgKey])) {
           continue
         }
@@ -127,7 +127,7 @@ if (browser) {
       // Collect nodes to delete in a stack.
       // impl detail: inverted stack for forward iteration
       let nodesToDelete = []
-      for (let node of walk(record.removedNodes)) {
+      for (let node of walkList(record.removedNodes)) {
         if (!(node.dataset && node.dataset[pkgKey])) {
           continue
         }
@@ -149,24 +149,15 @@ if (browser) {
   })
 }
 
-function* iterate(list) {
-  if (list[Symbol.iterator]) {
-    yield* list
-  }
-  for (let i = 0, len = list.length; i < len; i++) {
-    yield list[i]
+function* walk(n) {
+  yield n
+  for (let childNode of n.childNodes) {
+    yield* walk(childNode)
   }
 }
 
-function* walk(n) {
-  if (n instanceof NodeList || Array.isArray(n)) {
-    for (let a of iterate(n)) {
-      yield* walk(a)
-    }
-    return
-  }
-  yield n
-  for (let childNode of iterate(n.childNodes)) {
-    yield* walk(childNode)
+function* walkList(list) {
+  for (let a of list) {
+    yield* walk(a)
   }
 }
