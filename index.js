@@ -150,6 +150,9 @@ if (browser) {
 }
 
 function* iterate(list) {
+  if (list[Symbol.iterator]) {
+    yield* list
+  }
   for (let i = 0, len = list.length; i < len; i++) {
     yield list[i]
   }
@@ -158,16 +161,12 @@ function* iterate(list) {
 function* walk(n) {
   if (n instanceof NodeList || Array.isArray(n)) {
     for (let a of iterate(n)) {
-      for (let b of walk(a)) {
-        yield b
-      }
+      yield* walk(a)
     }
     return
   }
   yield n
   for (let childNode of iterate(n.childNodes)) {
-    for (let node of walk(childNode)) {
-      yield node
-    }
+    yield* walk(childNode)
   }
 }
