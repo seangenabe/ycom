@@ -26,6 +26,6 @@
     "browser-launcher2": "^0.4.6",
     "browserify": "^13.1.0",
     "tape": "^4.6.0",
-    "tape-run": "^2.1.4"
+    "tape-run": "^2.4.0"
   }
 }
