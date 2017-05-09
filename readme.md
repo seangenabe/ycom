@@ -1,5 +1,7 @@
 # ycom
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/seangenabe/ycom.svg)](https://greenkeeper.io/)
+
 `yo-yo` components with classes and events.
 
 [![npm](https://img.shields.io/npm/v/ycom.svg?style=flat-square)](https://www.npmjs.com/package/ycom)
