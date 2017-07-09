@@ -1,5 +1,7 @@
 # ycom
 
+**DEPRECATED.** Please use [nanocomponent](https://github.com/yoshuawuyts/nanocomponent) or [base-component](https://github.com/shama/base-element) instead.
+
 `yo-yo` components with classes and events.
 
 [![npm](https://img.shields.io/npm/v/ycom.svg?style=flat-square)](https://www.npmjs.com/package/ycom)
