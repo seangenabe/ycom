@@ -1,6 +1,6 @@
 # ycom
 
-**DEPRECATED.** Please use [nanocomponent](https://github.com/yoshuawuyts/nanocomponent) or [base-component](https://github.com/shama/base-element) instead.
+**DEPRECATED.** Please use [nanocomponent](https://github.com/yoshuawuyts/nanocomponent) or [base-element](https://github.com/shama/base-element) instead.
 
 `yo-yo` components with classes and events.
 
